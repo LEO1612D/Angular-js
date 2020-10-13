@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myFirstApp">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="./angular.min.js"></script>
+    <script src="./app.js"></script>
   </head>
   <body>
-    <h1>HEllo</h1>
+    <h1>My first Angular JS APP</h1>
+    <div ng-controller="MyFirstController">
+      {{sayHello()}}
+      <!-- Calling function -->
+
+      <input type="text" ng-model="name" />
+      <!-- we bind name in input field and we can change it as well  -->
+      {{name}}
+    </div>
   </body>
 </html>
