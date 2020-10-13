@@ -11,9 +11,18 @@
     <h1>Expression and Interpolation</h1>
     <div ng-controller="MsgController">
       Message is: <br />
-      {{sayMessage()}}
+      Original : {{sayMessage()}}
+      <br />
+      Loves : {{sayLoves()}}
+      <br />
+      <!-- FIlter chaining one result implies to others | | | -->
+      Truth : {{sayLoves() | truth :'react':'angular' | truth : 'angular'
+      :'react'}}
+
       <div>
         <button ng-click="choose()">Choose Mountains</button>
+        <!-- This is example of filter currency is filter ':' is for passsing arguments as cur. sign decimal points and cookieCost is scope variable -->
+        Cost : {{cookieCost | currency : "#nikunj" : 4}}
       </div>
       <!-- BY SRC WE GET ERROR OF 404 TO HANDLE THAT WE USE ng-src -->
       <img ng-src="./mountains_{{color}}.jpg" alt="" />
