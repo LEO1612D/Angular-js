@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShoppingListApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ng-repeat</title>
+    <script src="../angular.min.js"></script>
+    <script src="./app.js"></script>
+  </head>
+  <body>
+    <h1>ng-repeat</h1>
+
+    <div ng-controller="ShoppingListController">
+      <h3>Shopping List</h3>
+      <!-- Array -->
+      <hr />
+      <ul>
+        <li ng-repeat="item in shoppingList1">
+          {{item}}
+        </li>
+      </ul>
+      <!-- FILTER -->
+      <hr />
+      <input type="text" name="" id="" ng-model="search" />
+
+      <ul>
+        <li ng-repeat="item in shoppingList1 | filter:search">
+          {{item}}
+        </li>
+      </ul>
+
+      <!-- Array of object -->
+      <hr />
+      <ul>
+        <li ng-repeat="item in shoppingList2">
+          {{item.name}}
+          <br />
+          {{item.quantity}}
+        </li>
+      </ul>
+      <!-- INDEX -->
+      <hr />
+      <ul>
+        <li ng-repeat="item in shoppingList2">
+          {{$index + 1}}. buy {{item.name}} of {{item.quantity}}
+        </li>
+      </ul>
+
+      <hr />
+
+      <input type="text" name="" id="" ng-model="shoppingList2[0].quantity" />
+
+      <hr />
+
+      <input type="text" ng-model="newItemName" placeholder="item name" />
+      <input
+        type="text"
+        ng-model="newItemQuantity"
+        placeholder="item Quantity"
+      />
+
+      <button ng-click="addToList()">Add</button>
+    </div>
+  </body>
+</html>
