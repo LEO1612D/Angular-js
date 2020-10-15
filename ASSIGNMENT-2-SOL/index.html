@@ -20,10 +20,10 @@
         <hr />
         <ul>
           <li ng-repeat="item in Buyitem.items">
-            Buy {{item.quantity}} {{item.name}}
-            <button ng-click="Buyitem.Bought($index,item.name,item.quantity)">
-              Buy
-            </button>
+           <div class="content"> Buy {{item.quantity}} {{item.name}}</div>
+           <div class="buy"> <button ng-click="Buyitem.Bought($index,item.name,item.quantity)">
+            Buy
+          </button></div>
           </li>
         </ul>
       </div>

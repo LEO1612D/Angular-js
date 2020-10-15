@@ -40,3 +40,10 @@ hr {
   border: none;
   border-bottom: 2px solid lightgrey;
 }
+.content {
+  display: inline-block;
+  width: 200px;
+}
+.buy {
+  display: inline-block;
+}
