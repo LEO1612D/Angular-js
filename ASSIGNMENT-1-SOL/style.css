@@ -45,3 +45,15 @@ h1 {
   border-bottom: 2px solid lightgrey;
   padding: 10px;
 }
+
+.normal {
+  color: royalblue;
+}
+
+.warning {
+  color: red;
+}
+
+.enjoy {
+  color: springgreen;
+}
