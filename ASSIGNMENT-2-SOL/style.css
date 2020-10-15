@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 500px;
+  padding-top: 50px;
+}
+
+ul {
+  list-style: decimal;
+}
+li {
+  padding: 10px;
+  font-weight: 500;
+  padding-left: 10px;
+}
+button {
+  outline: none;
+  border: none;
+  width: 100px;
+  height: 50px;
+  color: #262424;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+.to-buy {
+  border-bottom: 2px solid lightgrey;
+  padding: 10px;
+}
+
+hr {
+  border: none;
+  border-bottom: 2px solid lightgrey;
+}

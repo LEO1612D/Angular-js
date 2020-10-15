@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShoppingListCheckOff">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping List Application</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="../angular.min.js"></script>
+    <script src="./app.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- TO BUY ITEMS -->
+      <div class="to-buy" ng-controller="ToBuyController as Buyitem">
+        <div ng-if="Buyitem.items.length == 0">
+          <h1>Everything is bought!</h1>
+        </div>
+        <div ng-if="Buyitem.items.length != 0">
+          <h1>Items to buy</h1>
+        </div>
+        <hr />
+        <ul>
+          <li ng-repeat="item in Buyitem.items">
+            Buy {{item.quantity}} {{item.name}}
+            <button ng-click="Buyitem.Bought($index,item.name,item.quantity)">
+              Buy
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ALREADY BOUGHT -->
+      <div class="to-buy" ng-controller="AlreadyBoughtController as BoughtItem">
+        <div ng-if="BoughtItem.items.length == 0">
+          <h1>Nothing bought yet</h1>
+        </div>
+        <div ng-if="BoughtItem.items.length != 0">
+          <h1>In Bucket</h1>
+        </div>
+        <ul>
+          <li ng-repeat="item in BoughtItem.items">
+            Bought {{item.quantity}} {{item.name}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
