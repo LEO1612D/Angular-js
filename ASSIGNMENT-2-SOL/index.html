@@ -12,12 +12,11 @@
     <div class="container">
       <!-- TO BUY ITEMS -->
       <div class="to-buy" ng-controller="ToBuyController as Buyitem">
+        <h1>Items to buy</h1>
         <div ng-if="Buyitem.items.length == 0">
-          <h1>Everything is bought!</h1>
+          <h5>Everything is bought!</h1>
         </div>
-        <div ng-if="Buyitem.items.length != 0">
-          <h1>Items to buy</h1>
-        </div>
+
         <hr />
         <ul>
           <li ng-repeat="item in Buyitem.items">
@@ -31,8 +30,9 @@
 
       <!-- ALREADY BOUGHT -->
       <div class="to-buy" ng-controller="AlreadyBoughtController as BoughtItem">
+        <h1>Already Bought</h1>
         <div ng-if="BoughtItem.items.length == 0">
-          <h1>Nothing bought yet</h1>
+          <h5>Nothing bought yet</h5>
         </div>
         <div ng-if="BoughtItem.items.length != 0">
           <h1>In Bucket</h1>

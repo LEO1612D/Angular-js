@@ -7,24 +7,24 @@
 
     const items = [
       {
-        name: "cookies",
+        name: "Paint Brush",
         quantity: 12
       },
       {
-        name: "cookies",
-        quantity: 12
+        name: "Canvas",
+        quantity: 1
       },
       {
-        name: "cookies",
-        quantity: 12
+        name: "Colors",
+        quantity: 24
       },
       {
-        name: "cookies",
-        quantity: 12
+        name: "Drawing Book",
+        quantity: 4
       },
       {
-        name: "cookies",
-        quantity: 12
+        name: "Pencils",
+        quantity: 8
       }
     ];
 
